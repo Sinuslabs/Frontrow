@@ -5,3 +5,4 @@ Installer/Images/
 settings.json
 Installer/GNU/
 Scripts/Config.js
+*.exe

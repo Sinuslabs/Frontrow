@@ -14,13 +14,13 @@ namespace About {
 	
 	inline function onWebsite(component, value) {
 		if (value) {
-			Engine.openWebsite('https://www.youtube.com/channel/UCJfRn0mxY61a5cYVBqEc9Zg');
+			Engine.openWebsite('https://sinuslabs.io/');
 		}
 	}
 	
 	inline function onYoutube(component, value) {
 		if (value) {
-			Engine.openWebsite('https://sinuslabs.io/');
+					Engine.openWebsite('https://www.youtube.com/channel/UCJfRn0mxY61a5cYVBqEc9Zg');
 		}
 	}
 	
