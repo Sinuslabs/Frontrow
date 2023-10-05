@@ -40,7 +40,10 @@ namespace About {
 	inline function onComboBox1Control(component, value)
 	{
 		if (value) {
-			Settings.setZoomLevel(ZOOM_FACTORS[value]);
+			Console.print(value);
+			Console.print(ZOOM_FACTORS[value - 1]);
+		
+			Settings.setZoomLevel(ZOOM_FACTORS[value - 1]);
 		}
 	};
 	

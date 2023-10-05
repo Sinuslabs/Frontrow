@@ -1,15 +1,18 @@
 let videoIndex = 0;
 const videoPlayer = document.getElementById("videoPlayer");
 
+onInit();
+
 const videos = [
-  "videos/Alien.mp4",
-  "videos/Monkey.mp4",
-  "videos/Cat1.mp4",
-  "videos/Dog1.mp4",
-  "videos/Cow1.mp4",
-  "videos/Frog1.mp4",
-  "videos/Gorilla.mp4",
+  "videos/compressed/Alien.mp4",
+  "videos/compressed/Monkey.mp4",
+  "videos/compressed/Cat1.mp4",
+  "videos/compressed/Dog1.mp4",
+  "videos/compressed/Cow1.mp4",
+  "videos/compressed/Frog1.mp4",
+  "videos/compressed/Gorilla.mp4",
 ];
+
 document.addEventListener("DOMContentLoaded", () => {
   preloadVideos(videos);
   preloadVideos(pixelVideos);
@@ -44,6 +47,7 @@ window.next = function () {
   if (videoIndex >= currentVideos.length) {
     videoIndex = 0; // Loop back to the first video
   }
+  onChange(videoIndex);
   videoPlayer.src = currentVideos[videoIndex];
   videoPlayer.play();
 };
@@ -53,6 +57,7 @@ window.previous = function () {
   if (videoIndex < 0) {
     videoIndex = currentVideos.length - 1; // Loop back to the last video
   }
+  onChange(videoIndex);
   videoPlayer.src = currentVideos[videoIndex];
   videoPlayer.play();
 };
@@ -63,6 +68,12 @@ window.playVideo = function (playing) {
   } else {
     videoPlayer.pause();
   }
+};
+
+window.syncValue = function (value) {
+  videoIndex = value;
+  videoPlayer.src = currentVideos[videoIndex];
+  videoPlayer.play();
 };
 
 const leftBtn = document.getElementById("left-btn");

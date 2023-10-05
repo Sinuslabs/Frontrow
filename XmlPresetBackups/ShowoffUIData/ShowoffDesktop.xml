@@ -3,6 +3,9 @@
 <ContentProperties DeviceType="Desktop">
   <Component type="ScriptPanel" id="route_main" x="0.0" y="0.0" width="500.0"
              height="500.0">
+    <Component type="ScriptSlider" id="animation" x="309.0" y="10.0" width="53.0"
+               height="100" parentComponent="route_main" max="6.0" stepSize="1.0"
+               defaultValue="6.0"/>
     <Component type="ScriptWebView" id="WebView1" x="0.0" y="0.0" parentComponent="route_main"
                width="500.0" height="500.0" enableCache="1"/>
   </Component>
@@ -10,7 +13,7 @@
              height="500.0" allowCallbacks="Clicks Only" itemColour="4278584838"
              itemColour2="4278584838" opaque="1" visible="0">
     <Component type="ScriptPanel" id="logo" x="220.0" y="100.0" parentComponent="route_about"
-               width="60" height="60"/>
+               width="60.0" height="60.0"/>
     <Component type="ScriptButton" id="website_link" x="190.0" y="221.0" parentComponent="route_about"
                width="140.0" height="40.0" text="sinuslabs.io" saveInPreset="0"
                enableMidiLearn="0" isMomentary="1"/>
@@ -30,14 +33,14 @@
                parentComponent="route_about" items="0.3&#10;0.4&#10;0.5&#10;0.75&#10;1.0&#10;1.2&#10;1.5&#10;2.0"
                text="Zoom"/>
     <Component type="ScriptSlider" id="smoothing" x="30.0" y="60.0" parentComponent="route_about"
-               width="60" height="40" max="149.0" mode="Discrete" middlePosition="148.0"
-               min="132.0" stepSize="0.1" defaultValue="148.0"/>
+               width="60.0" height="40.0" max="149.0" mode="Discrete" middlePosition="148.0"
+               min="132.0" stepSize="0.1000000014901161" defaultValue="148.0"/>
     <Component type="ScriptSlider" id="vuMeter" x="40.0" y="120.0" parentComponent="route_about"
-               width="20" height="250" style="Vertical" showTextBox="0" scrollWheel="0"
-               enableMidiLearn="0" bgColour="4278190080" itemColour="4294967295"
+               width="20.0" height="250.0" style="Vertical" showTextBox="0"
+               scrollWheel="0" enableMidiLearn="0" bgColour="4278190080" itemColour="4294967295"
                itemColour2="4227858431"/>
     <Component type="ScriptLabel" id="smoothing label" x="20.0" y="35.0" parentComponent="route_about"
-               text="Smoothing" width="80" height="30" editable="0" textColour="4289181886"/>
+               text="Smoothing" width="80.0" height="30.0" editable="0" textColour="4289181886"/>
     <Component type="ScriptLabel" id="Zoom_label" x="190.0" y="340.0" parentComponent="route_about"
                text="zoom" editable="0" textColour="4289181886"/>
   </Component>
